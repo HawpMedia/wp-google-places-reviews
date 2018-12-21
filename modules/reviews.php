@@ -37,7 +37,7 @@ class hm_review_HMWPGR {
 		);
 
 		$ch_options = array(
-			CURLOPT_URL => 'https://maps.googleapis.com/maps/api/place/details/json?key='.esc_attr(get_option('hm5sr_google_api_key')).'&placeid='.$atts['place_id'],
+			CURLOPT_URL => 'https://maps.googleapis.com/maps/api/place/details/json?key='.esc_attr(get_option('hmwpgr_google_api_key')).'&placeid='.$atts['place_id'],
 			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6',
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_SSL_VERIFYPEER => false,
