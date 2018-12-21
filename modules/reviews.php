@@ -6,16 +6,16 @@
 
 if (!defined('ABSPATH')) exit();
 
-class hm_review_HMGRB {
+class hm_review_HMWPGR {
 
 	public function __construct() {
-		add_shortcode('hmgrb_reviews', array($this, 'review_shortcode'));
+		add_shortcode('hmwpgr_reviews', array($this, 'review_shortcode'));
 		add_action('enqueue_block_editor_assets', array($this, 'setup_block_editor_assets'));
 		add_action('init', array($this, 'setup_block_init'));
 	}
 
 	public function add_scripts_styles() {
-		wp_enqueue_style('hmgrb-review-style', HMGRB_URL. 'assets/css/style.css');
+		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL. 'assets/css/style.css');
 	}
 
 	public function review_shortcode($atts) {
@@ -85,8 +85,8 @@ class hm_review_HMGRB {
 	}
 
 	public function setup_block_editor_assets() {
-		wp_enqueue_style('google-review-block', HMGRB_URL.'/blocks/google/editor.css');
-		wp_enqueue_script('google-review-block', HMGRB_URL.'/blocks/google/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
+		wp_enqueue_style('google-review-block', HMWPGR_URL.'/blocks/google/editor.css');
+		wp_enqueue_script('google-review-block', HMWPGR_URL.'/blocks/google/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
 	}
 
 	public function setup_block_init() {

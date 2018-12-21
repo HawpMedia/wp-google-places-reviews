@@ -6,17 +6,17 @@
 
 if (!defined('ABSPATH')) exit();
 
-class hm_form_HMGRB {
+class hm_form_HMWPGR {
 
 	public function __construct() {
-		add_shortcode('hmgrb_form', array($this, 'review_form_shortcode'));
+		add_shortcode('hmwpgr_form', array($this, 'review_form_shortcode'));
 		add_action('enqueue_block_editor_assets', array($this, 'setup_block_editor_assets'));
 		add_action('init', array($this, 'setup_block_init'));
 	}
 
 	public function add_scripts_styles() {
-		wp_enqueue_style('hmgrb-review-style', HMGRB_URL.'assets/css/style.css');
-		wp_enqueue_script('hmgrb-clickcopy-script', HMGRB_URL.'assets/js/click-to-copy.js', array('jquery'));
+		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL.'assets/css/style.css');
+		wp_enqueue_script('hmwpgr-clickcopy-script', HMWPGR_URL.'assets/js/click-to-copy.js', array('jquery'));
 	}
 
 	public function review_form_shortcode($atts) {
@@ -74,7 +74,7 @@ class hm_form_HMGRB {
 					</div>
 					<h2>Select the sites below to share your review:</h2>';
 					if (!empty($hm5sr_google)) {
-						$result .= '<a href="'.$hm5sr_google.'" target="_blank"><img src="'.HMGRB_URL.'assets/images/googlelogo.png' .'" width="100%" style="max-width:300px; margin:0px auto;" /></a><br />';
+						$result .= '<a href="'.$hm5sr_google.'" target="_blank"><img src="'.HMWPGR_URL.'assets/images/googlelogo.png' .'" width="100%" style="max-width:300px; margin:0px auto;" /></a><br />';
 					}
 				}
 			}
@@ -88,8 +88,8 @@ class hm_form_HMGRB {
 	}
 
 	public function setup_block_editor_assets() {
-		wp_enqueue_style('google-review-form-block', HMGRB_URL.'/blocks/form/editor.css');
-		wp_enqueue_script('google-review-form-block', HMGRB_URL.'/blocks/form/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
+		wp_enqueue_style('google-review-form-block', HMWPGR_URL.'/blocks/form/editor.css');
+		wp_enqueue_script('google-review-form-block', HMWPGR_URL.'/blocks/form/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
 	}
 
 	public function setup_block_init() {
