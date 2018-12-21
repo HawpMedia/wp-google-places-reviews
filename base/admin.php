@@ -155,13 +155,13 @@ class hm_admin_HMWPGR {
 							<h2>Google Reviews</h2>
 							<p>To show your google places listing reviews, please use the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[HMWPGR_reviews]</code></p>
+								<p><code>[hmwpgr_reviews]</code></p>
 							</div>
 
 							<h2>Review Lead Form</h2>
 							<p>To add the review form to any page, please use the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[HMWPGR_form]</code></p>
+								<p><code>[hmwpgr_form]</code></p>
 								<p>This shortcode will display a review form on your website. If the user leaves a 5 star review they will be forwarded to your google business page. Any reviews with 4 stars or less will not redirect the user and will not be posted anywhere.</p>
 								<p>This is a perfect way to filter out potentially harmful reviews being published on your google profile.</p>
 							</div>
