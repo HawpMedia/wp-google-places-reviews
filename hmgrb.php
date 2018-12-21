@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Google Reviews Block
+ * Plugin Name: WP Google Reviews
  * Plugin URI: http://hawpmedia.com/
  * Description: Request reviews from your customers with this simple plugin and push only the 5 star reviews through to Google.
  * Version: 1.0.0

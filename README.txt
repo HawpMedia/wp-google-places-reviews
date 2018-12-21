@@ -1,4 +1,4 @@
-=== WP Google Places Reviews ===
+=== WP Google Reviews ===
 Contributors: hawpmedia
 Tags: Hawp Media, Google Reviews, Google Places
 Requires at least: 3.5
@@ -11,7 +11,7 @@ Easily add your Google Places profile reviews to your website.
 
 == Description ==
 
-**Description:** Welcome to WP Google Places Reviews: Easily add your Google Places profile reviews to your website. Provides a simple Gutenberg Block and Classic Editor Shortcode. 
+**Description:** Welcome to WP Google Places Reviews: Easily add your Google Places profile reviews to your website. Provides a simple Gutenberg Block and Classic Editor Shortcode.
 
 == Installation ==
 
