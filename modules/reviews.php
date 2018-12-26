@@ -1,6 +1,6 @@
 <?php
 /**
- * WP Google Reviews
+ * WP Google Places Reviews
  * Version 1.0.0
  */
 
