@@ -38,8 +38,8 @@ class hm_admin_HMWPGR {
 	}
 
 	public function admin_scripts_styles() {
-		wp_enqueue_style('hmp-admin-style', HMWPGR_URL.'assets/css/admin-style.css');
-		wp_enqueue_script('hmp-admin-script', HMWPGR_URL.'assets/js/admin-script.js', array('jquery'));
+		wp_enqueue_style('hmp-admin-style', HMWPGR_URL.'css/admin-style.css');
+		wp_enqueue_script('hmp-admin-script', HMWPGR_URL.'js/admin-script.js', array('jquery'));
 	}
 
 	public function add_settings_page() { ?>
@@ -48,7 +48,7 @@ class hm_admin_HMWPGR {
 
 				<header id="hmp_header">
 					<div class="hmp_header-logo">
-						<img src="<?php echo HMWPGR_URL.'assets/images/hmp_logo.svg'; ?>" width="163" height="44" alt="Logo Hawp 5 Star Reviews">
+						<img src="<?php echo HMWPGR_URL.'images/hmp_logo.svg'; ?>" width="163" height="44" alt="Logo Hawp 5 Star Reviews">
 						<div class="hmp_name">WP Google Reviews</div>
 					</div>
 					<div class="hmp_header-nav">
