@@ -1,4 +1,4 @@
-=== WP Google Reviews ===
+=== WP Google Places Reviews ===
 Contributors: hawpmedia
 Tags: Hawp Media, Google Reviews, Google Places
 Requires at least: 3.5
