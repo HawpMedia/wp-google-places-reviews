@@ -1,7 +1,7 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.3
+ * Version 1.0.4
  */
 
 if (!defined('ABSPATH')) exit();
@@ -134,17 +134,32 @@ class hm_admin_HMGPR {
 							</div>
 
 							<h2>Google Reviews</h2>
-							<p>To show your google places listing reviews, please use the shortcode below:</p>
+							<p>To show your google places listing reviews you can use our Gutenberg block under 'common' or the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[hmgpr_reviews]</code></p>
+								<p><code>[hmgpr_reviews place_id="YOUR_PLACE_ID_HERE"]</code></p>
+								<h4>Attributes</h4>
+								<ul>
+									<li><strong>place_id:</strong> Your google place id</li>
+									<li><strong>format:</strong> 'row' or 'column'.</li>
+									<li><strong>quote_color:</strong> Hex color code.</li>
+									<li><strong>star_color:</strong> Hex color code.</li>
+									<li><strong>wrapper_class:</strong> Your custom class.</li>
+								</ul>
 							</div>
 
 							<h2>Review Lead Form</h2>
 							<p>To add the review form to any page, please use the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[hmgpr_form]</code></p>
+								<p><code>[hmgpr_form place_id="YOUR_PLACE_ID_HERE"]</code></p>
+								<p>To show your google places review form you can use our Gutenberg block under 'common' or the shortcode below:</p>
 								<p>This shortcode will display a review form on your website. If the user leaves a 5 star review they will be forwarded to your google business page. Any reviews with 4 stars or less will not redirect the user and will not be posted anywhere.</p>
 								<p>This is a perfect way to filter out potentially harmful reviews being published on your google profile.</p>
+								<h4>Attributes</h4>
+								<ul>
+									<li><strong>place_id:</strong> Your google place id</li>
+									<li><strong>btn_class:</strong> Your custom class.</li>
+									<li><strong>wrapper_class:</strong> Your custom class.</li>
+								</ul>
 							</div>
 						</div>
 
