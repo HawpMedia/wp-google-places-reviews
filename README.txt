@@ -20,8 +20,8 @@ Easily add your Google Places profile reviews to your website.
 3. You can configure the Plugin Settings in `Settings` -> `WP Google Places Reviews`
 
 == Requirements ==
-1. This plugin requires a Google Places API key in order to work. Check out this tutorial on how to get yours set up: https://www.youtube.com/watch?v=PsWaDosk2gc
-2. You will also need your Google Place ID. Search your listing to retrieve your Place ID here: https://developers.google.com/places/place-id
+1. This plugin requires a Google Places API key in order to work. Check out this tutorial on how to get yours set up [here](https://www.youtube.com/watch?v=PsWaDosk2gc)
+2. You will also need your Google Place ID. Search your listing to retrieve your Place ID [here](https://developers.google.com/places/place-id)
 
 == Limitations ==
 
