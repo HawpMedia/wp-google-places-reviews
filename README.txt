@@ -33,6 +33,9 @@ Easily add your Google Places profile reviews to your website.
 
 == Changelog ==
 
+= 1.0.5 =
+* Fix css issue where max width is not defined.
+
 = 1.0.4 =
 * Add shortcode documentation
 
