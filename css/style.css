@@ -29,7 +29,7 @@
 #hawp_google-reviews .review-stars ul li svg { width: 1em; }
 #hawp_google-reviews .review-stars ul li:last-child { margin-right: 10px; }
 #hawp_google-reviews .review-photo { max-width: 3em; margin-right: 1em; }
-#hawp_google-reviews .review-photo img { border-radius: 100%; box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24); }
+#hawp_google-reviews .review-photo img { max-width: 100%; height: auto; border-radius: 50%; box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24); }
 #hawp_google-reviews .review-meta { margin-left: 1em; display: flex; flex-wrap: wrap; }
 #hawp_google-reviews .review-author { color: #427fed; font-weight: 600; display: block; }
 #hawp_google-reviews .review-sep { display: none; }
