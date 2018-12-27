@@ -25,7 +25,7 @@ function hmpGoogleReviewFormBlock() {
 	var blockSlug = 'hmp/google-review-form-block';
 
 	registerBlockType(blockSlug, {
-		title: 'Google Reviews',
+		title: 'Google Review Form',
 		description: 'Display top 5 Google places listing reviews.',
 		icon: 'feedback',
 		category: 'common',

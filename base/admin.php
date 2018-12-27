@@ -65,9 +65,6 @@ class hm_admin_HMGPR {
 							<div class="hmp_menuItem-description">Shortcodes & how-to</div>
 						</span>
 					</div>
-					<div class="hmp_header-footer">
-						<p><?php echo 'version '.HMGPR_CURRENT_VERSION; ?></p>
-					</div>
 				</header>
 
 				<section id="hmp_content">

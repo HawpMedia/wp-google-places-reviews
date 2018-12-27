@@ -10,10 +10,6 @@
 
 if (!defined('ABSPATH')) exit();
 
-$plugin_data = get_plugin_data(__FILE__);
-$plugin_version = $plugin_data['Version'];
-define('HMGPR_CURRENT_VERSION', $plugin_version);
-
 define('HMGPR_PATH', plugin_dir_path(__FILE__));
 define('HMGPR_URL', plugin_dir_url(__FILE__));
 
