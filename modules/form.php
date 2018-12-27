@@ -1,7 +1,7 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.0
+ * Version 1.0.1
  */
 
 if (!defined('ABSPATH')) exit();
@@ -15,8 +15,8 @@ class hm_form_HMWPGR {
 	}
 
 	public function add_scripts_styles() {
-		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL.'assets/css/style.css');
-		wp_enqueue_script('hmwpgr-clickcopy-script', HMWPGR_URL.'assets/js/click-to-copy.js', array('jquery'));
+		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL.'css/style.css');
+		wp_enqueue_script('hmwpgr-clickcopy-script', HMWPGR_URL.'js/click-to-copy.js', array('jquery'));
 	}
 
 	public function review_form_shortcode($atts) {
@@ -74,7 +74,7 @@ class hm_form_HMWPGR {
 					</div>
 					<h2>Select the sites below to share your review:</h2>';
 					if (!empty($hm5sr_google)) {
-						$result .= '<a href="'.$hm5sr_google.'" target="_blank"><img src="'.HMWPGR_URL.'assets/images/googlelogo.png' .'" width="100%" style="max-width:300px; margin:0px auto;" /></a><br />';
+						$result .= '<a href="'.$hm5sr_google.'" target="_blank"><img src="'.HMWPGR_URL.'images/googlelogo.png' .'" width="100%" style="max-width:300px; margin:0px auto;" /></a><br />';
 					}
 				}
 			}

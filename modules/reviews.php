@@ -1,7 +1,7 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.0
+ * Version 1.0.1
  */
 
 if (!defined('ABSPATH')) exit();
@@ -15,7 +15,7 @@ class hm_review_HMWPGR {
 	}
 
 	public function add_scripts_styles() {
-		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL. 'assets/css/style.css');
+		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL. 'css/style.css');
 	}
 
 	public function review_shortcode($atts) {
