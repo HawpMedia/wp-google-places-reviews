@@ -1,21 +1,21 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.1
+ * Version 1.0.2
  */
 
 if (!defined('ABSPATH')) exit();
 
-class hm_review_HMWPGR {
+class hm_review_HMGPR {
 
 	public function __construct() {
-		add_shortcode('hmwpgr_reviews', array($this, 'review_shortcode'));
+		add_shortcode('hmgpr_reviews', array($this, 'review_shortcode'));
 		add_action('enqueue_block_editor_assets', array($this, 'setup_block_editor_assets'));
 		add_action('init', array($this, 'setup_block_init'));
 	}
 
 	public function add_scripts_styles() {
-		wp_enqueue_style('hmwpgr-review-style', HMWPGR_URL. 'css/style.css');
+		wp_enqueue_style('hmgpr-review-style', HMGPR_URL. 'css/style.css');
 	}
 
 	public function review_shortcode($atts) {
@@ -37,7 +37,7 @@ class hm_review_HMWPGR {
 		);
 
 		$ch_options = array(
-			CURLOPT_URL => 'https://maps.googleapis.com/maps/api/place/details/json?key='.esc_attr(get_option('hmwpgr_google_api_key')).'&placeid='.$atts['place_id'],
+			CURLOPT_URL => 'https://maps.googleapis.com/maps/api/place/details/json?key='.esc_attr(get_option('hmgpr_google_api_key')).'&placeid='.$atts['place_id'],
 			CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6',
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_SSL_VERIFYPEER => false,
@@ -85,8 +85,8 @@ class hm_review_HMWPGR {
 	}
 
 	public function setup_block_editor_assets() {
-		wp_enqueue_style('google-review-block', HMWPGR_URL.'/blocks/google/editor.css');
-		wp_enqueue_script('google-review-block', HMWPGR_URL.'/blocks/google/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
+		wp_enqueue_style('google-review-block', HMGPR_URL.'/blocks/reviews/editor.css');
+		wp_enqueue_script('google-review-block', HMGPR_URL.'/blocks/reviews/block.js', array('wp-blocks', 'wp-editor', 'wp-plugins', 'wp-element', 'wp-components'));
 	}
 
 	public function setup_block_init() {

@@ -1,12 +1,12 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.0
+ * Version 1.0.2
  */
 
 if (!defined('ABSPATH')) exit();
 
-class hm_admin_HMWPGR {
+class hm_admin_HMGPR {
 
 	public function __construct() {
 		if (is_admin()) {
@@ -28,18 +28,18 @@ class hm_admin_HMWPGR {
 	}
 
 	public function register_settings() {
-		register_setting('hmwpgr_settings-group', 'hmwpgr_google_api_key');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_failtitle');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_faildescription');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_successtitle');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_successdescription');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_introtitle');
-		register_setting('hmwpgr_settings-group', 'hmwpgr_introdescription');
+		register_setting('hmgpr_settings-group', 'hmgpr_google_api_key');
+		register_setting('hmgpr_settings-group', 'hmgpr_failtitle');
+		register_setting('hmgpr_settings-group', 'hmgpr_faildescription');
+		register_setting('hmgpr_settings-group', 'hmgpr_successtitle');
+		register_setting('hmgpr_settings-group', 'hmgpr_successdescription');
+		register_setting('hmgpr_settings-group', 'hmgpr_introtitle');
+		register_setting('hmgpr_settings-group', 'hmgpr_introdescription');
 	}
 
 	public function admin_scripts_styles() {
-		wp_enqueue_style('hmp-admin-style', HMWPGR_URL.'css/admin-style.css');
-		wp_enqueue_script('hmp-admin-script', HMWPGR_URL.'js/admin-script.js', array('jquery'));
+		wp_enqueue_style('hmp-admin-style', HMGPR_URL.'css/admin-style.css');
+		wp_enqueue_script('hmp-admin-script', HMGPR_URL.'js/admin-script.js', array('jquery'));
 	}
 
 	public function add_settings_page() { ?>
@@ -48,79 +48,75 @@ class hm_admin_HMWPGR {
 
 				<header id="hmp_header">
 					<div class="hmp_header-logo">
-						<img src="<?php echo HMWPGR_URL.'images/hmp_logo.svg'; ?>" width="163" height="44" alt="Logo Hawp 5 Star Reviews">
+						<img src="<?php echo HMGPR_URL.'images/hmp_logo.svg'; ?>" width="163" height="44" alt="Logo Hawp 5 Star Reviews">
 						<div class="hmp_name">WP Google Reviews</div>
 					</div>
 					<div class="hmp_header-nav">
-						<span data-tab="hmwpgr_general" class="hmp_menuItem show">
+						<span data-tab="hmgpr_general" class="hmp_menuItem show">
 							<div class="hmp_menuItem-title">General Settings</div>
 							<div class="hmp_menuItem-description">Basic plugin settings</div>
 						</span>
-						<span data-tab="hmwpgr_apiconnection" class="hmp_menuItem">
+						<span data-tab="hmgpr_apiconnection" class="hmp_menuItem">
 							<div class="hmp_menuItem-title">Google API</div>
 							<div class="hmp_menuItem-description">Google Places API Key</div>
 						</span>
-						<span data-tab="hmwpgr_schema" class="hmp_menuItem">
-							<div class="hmp_menuItem-title">SEO Schema</div>
-							<div class="hmp_menuItem-description">Improve review visibility</div>
-						</span>
-						<span data-tab="hmwpgr_documentation" class="hmp_menuItem">
+						<span data-tab="hmgpr_documentation" class="hmp_menuItem">
 							<div class="hmp_menuItem-title">Documentation</div>
 							<div class="hmp_menuItem-description">Shortcodes & how-to</div>
 						</span>
 					</div>
 					<div class="hmp_header-footer">
-						<p><?php echo 'version '.HMWPGR_CURRENT_VERSION; ?></p>
+						<p><?php echo 'version '.HMGPR_CURRENT_VERSION; ?></p>
 					</div>
 				</header>
 
 				<section id="hmp_content">
 					<form action="options.php" method="post">
 
-						<div id="hmwpgr_general" class="hmp_page show">
+						<div id="hmgpr_general" class="hmp_page show">
 							<div class="hmp_section-header">
 								<h1><span class="hmp_section-header-icon dashicons dashicons-admin-settings"></span> General Settings</h1>
 							</div>
-							<?php settings_fields('hmwpgr_settings-group'); ?>
-							<?php do_settings_sections('hmwpgr_settings-group'); ?>
+							<?php settings_fields('hmgpr_settings-group'); ?>
+							<?php do_settings_sections('hmgpr_settings-group'); ?>
 							<h2>Title at Introduction</h2>
 							<p>Example: <code>Please Leave Us A Review Below.</code></p>
 							<div class="hmp_field-container">
-								<input type="text" name="hmwpgr_introtitle" value="<?php echo esc_attr(get_option('hmwpgr_introtitle')); ?>" />
+								<input type="text" name="hmgpr_introtitle" value="<?php echo esc_attr(get_option('hmgpr_introtitle')); ?>" />
 							</div>
 
 							<h2>Description at Introduction</h2>
 							<p>Example: <code>Please check the amount of stars based on your experience.</code></p>
 							<div class="hmp_field-container">
-								<textarea name="hmwpgr_introdescription"><?php echo esc_attr(get_option('hmwpgr_introdescription')); ?></textarea>
+								<textarea name="hmgpr_introdescription"><?php echo esc_attr(get_option('hmgpr_introdescription')); ?></textarea>
 							</div>
 
 							<h2>Title if User Leaves 5 Star Review</h2>
 							<p>Example: <code>Thank You For Leaving A Review!</code></p>
 							<div class="hmp_field-container">
-								<input type="text" name="hmwpgr_successtitle" value="<?php echo esc_attr(get_option('hmwpgr_successtitle')); ?>" />
+								<input type="text" name="hmgpr_successtitle" value="<?php echo esc_attr(get_option('hmgpr_successtitle')); ?>" />
 							</div>
 
 							<h2>Description if User Leaves 5 Star Review</h2>
 							<p>Example: <code>Would you mind sharing your review on Google?</code></p>
 							<div class="hmp_field-container">
-								<textarea name="hmwpgr_successdescription"><?php echo esc_attr(get_option('hmwpgr_successdescription')); ?></textarea>
+								<textarea name="hmgpr_successdescription"><?php echo esc_attr(get_option('hmgpr_successdescription')); ?></textarea>
 							</div>
 
 							<h2>Title if User Leaves 4 Star or Less Review</h2>
 							<p>Example: <code>Thank You For Leaving A Review!</code></p>
 							<div class="hmp_field-container">
-								<input type="text" name="hmwpgr_failtitle" value="<?php echo esc_attr(get_option('hmwpgr_failtitle')); ?>" />
+								<input type="text" name="hmgpr_failtitle" value="<?php echo esc_attr(get_option('hmgpr_failtitle')); ?>" />
 							</div>
 
 							<h2>Description if User Leaves 4 Star or Less Review</h2>
 							<p>Example: <code>We are Sorry Your experience wasn't great.</code></p>
 							<div class="hmp_field-container">
-								<textarea name="hmwpgr_faildescription"><?php echo esc_attr(get_option('hmwpgr_faildescription')); ?></textarea>
+								<textarea name="hmgpr_faildescription"><?php echo esc_attr(get_option('hmgpr_faildescription')); ?></textarea>
 							</div>
 						</div>
 
-						<div id="hmwpgr_apiconnection" class="hmp_page">
+						<div id="hmgpr_apiconnection" class="hmp_page">
 							<div class="hmp_section-header">
 								<h1><span class="hmp_section-header-icon dashicons dashicons-admin-multisite"></span> Google API Connection</h1>
 							</div>
@@ -131,23 +127,11 @@ class hm_admin_HMWPGR {
 							<h2>Google Places API Key</h2>
 							<p>Get your <a href="https://console.developers.google.com/cloud-resource-manager" target="_blank" title="Click to get your ID">Google Places API Key</a></p>
 							<div class="hmp_field-container">
-								<input type="text" name="hmwpgr_google_api_key" placeholder="Google Places API Key" value="<?php echo esc_attr(get_option('hmwpgr_google_api_key')); ?>" />
+								<input type="text" name="hmgpr_google_api_key" placeholder="Google Places API Key" value="<?php echo esc_attr(get_option('hmgpr_google_api_key')); ?>" />
 							</div>
 						</div>
 
-						<div id="hmwpgr_schema" class="hmp_page">
-							<div class="hmp_section-header">
-								<h1><span class="hmp_section-header-icon dashicons dashicons-media-text"></span> SEO Schema</h1>
-							</div>
-
-							<h2>Business Details</h2>
-							<p>These details are required for your schema markup to generate properly. If all the fields are not filled out, then your schema markup will NOT validate with Google.</p>
-							<div class="hmp_field-container">
-
-							</div>
-						</div>
-
-						<div id="hmwpgr_documentation" class="hmp_page">
+						<div id="hmgpr_documentation" class="hmp_page">
 							<div class="hmp_section-header">
 								<h1><span class="hmp_section-header-icon dashicons dashicons-media-text"></span> Documentation</h1>
 							</div>
@@ -155,13 +139,13 @@ class hm_admin_HMWPGR {
 							<h2>Google Reviews</h2>
 							<p>To show your google places listing reviews, please use the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[hmwpgr_reviews]</code></p>
+								<p><code>[hmgpr_reviews]</code></p>
 							</div>
 
 							<h2>Review Lead Form</h2>
 							<p>To add the review form to any page, please use the shortcode below:</p>
 							<div class="hmp_field-container">
-								<p><code>[hmwpgr_form]</code></p>
+								<p><code>[hmgpr_form]</code></p>
 								<p>This shortcode will display a review form on your website. If the user leaves a 5 star review they will be forwarded to your google business page. Any reviews with 4 stars or less will not redirect the user and will not be posted anywhere.</p>
 								<p>This is a perfect way to filter out potentially harmful reviews being published on your google profile.</p>
 							</div>

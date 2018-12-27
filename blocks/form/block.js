@@ -11,8 +11,6 @@ var el = wp.element.createElement,
 	PanelBody = wp.components.PanelBody,
 	TextControl = wp.components.TextControl,
 	SelectControl = wp.components.SelectControl,
-	//RadioControl = wp.components.RadioControl,
-	//ToggleControl = wp.components.ToggleControl,
 	ServerSideRender = wp.components.ServerSideRender;
 
 // Call block when DOM is fully load and parsed

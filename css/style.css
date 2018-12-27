@@ -1,6 +1,6 @@
 /**
  * WP Google Places Reviews
- * Version 1.0.0
+ * Version 1.0.2
  */
 
 /*--------------------------------------------------------------
@@ -10,13 +10,6 @@
 # Google Reviews
 # Responsive
 --------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Colors
---------------------------------------------------------------*/
-:root {
-
-}
 
 /*--------------------------------------------------------------
 # Google Reviews
@@ -42,156 +35,46 @@
 #hawp_google-reviews .review-sep { display: none; }
 #hawp_google-reviews .review-date { display: block; font-size: .9em; color: #999; }
 
-
-#hmwpgr .br-theme-bootstrap-stars .br-widget a {
-  font-size:40px !important;
-}
-
-/* Google */
-
-#hmwpgr .rating {
-    margin-bottom: 1em;
-    padding: 0 0 1em;
-    width: auto;
-}
-#hmwpgr .rating span {
-    cursor: pointer;
-    float: right;
-    position: relative;
-}
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
 #hmwpgr { margin:1em auto; padding:1em 0; width:100%; }
+#hmwpgr .br-theme-bootstrap-stars .br-widget a { font-size:40px !important; }
+#hmwpgr .rating { margin-bottom: 1em; padding: 0 0 1em; width: auto; }
+#hmwpgr .rating span { cursor: pointer; float: right; position: relative; }
 #hmwpgr textarea { width: 100%; }
-
-#hmwpgr .reviewfail {
-    background: red none repeat scroll 0 0;
-    color: white;
-    font-family: arial;
-    margin-top: 10px;
-    padding: 20px;
-}
-#hmwpgr .reviewsuccess {
-    background: green none repeat scroll 0 0;
-    color: white;
-    font-family: arial;
-    margin-top: 10px;
-    padding: 20px;
-}
-
-#hmwpgr #footer-bottom {
-    background-color: #fff !important;
-}
-
-#hmwpgr #footer-info, #hmwpgr #footer-info a {
-    color: #959595;
-}
-
-#hmwpgr .fifty {
-    float: left;
-    padding-right: 30px;
-    width: 50%;
-}
-#hmwpgr .email {
-    float: left;
-    width: 50%;
-}
-#hmwpgr .registerbutton {
-    border: 2px solid #2ea3f2;
-    border-radius: 5px;
-    height: 44px;
-    padding: 11px 15px !important;
-}
-#hmwpgr #main-header {
-    background-color: #f2f2f2;
-    box-shadow: none;
-}
-#hmwpgr .current-menu-item {
-    border-bottom: 3px solid #ccc;
-}
-#hmwpgr .menu-item {
-	padding-left: 20px;
-}
-#hmwpgr #logo {
-    max-height: 55%;
-}
-#hmwpgr #top-menu li {
-    font-size: 16px;
-}
-#hmwpgr .reviewcopy {
-    background: #f7f7f7 none repeat scroll 0 0;
-    border: 1px solid #ccc;
-    font-style: italic;
-    padding: 20px;
-}
-#hmwpgr #footer-info {
-    text-align: center;
-    width: 100%;
-}
-#hmwpgr .edit-attachment {
-	display:none;
-}
-#hmwpgr #wpua-preview-existing {
-	width: 100%;
-}
-#hmwpgr #wpua-thumbnail-existing, .description, #pmpro_account-profile {
-	display: none !important;
-}
-#hmwpgr #wpua-remove-button-existing, #wpua-undo-button-existing {
-	float: left;
-	margin-right:10px;
-	width: auto;
-}
-#hmwpgr form.pmpro_form .pmpro_submit {
-    margin-left: 0px;
-}
-#hmwpgr th {
-	background: #f7f7f7 none repeat scroll 0 0;
-}
-#hmwpgr #wpua-add-existing {
-	margin-bottom: 26px;
-}
-#hmwpgr .entry-content table, body.et-pb-preview #main-content .container table {
-    margin: 17px 0 15px;
-}
-#hmwpgr .copybutton {
-    background: #2ea3f2 none repeat scroll 0 0 !important;
-    border: 0 none;
-    border-radius: 5px;
-    color: #fff !important;
-    cursor: pointer;
-    font-family: arial;
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 10px;
-    padding: 12px 22px;
-    width: 100%;
-}
-#hmwpgr .updated, .wpua-edit-container h3 {
-	display:none;
-}
-
-
-#hmwpgr .half {
-	float: left;
-    margin-right: 5%;
-    width: 45%;
-}
-
-
-#hmwpgr .lower h2 {
-    font-size: 18px !important;
-    font-weight: 600px !important;
-}
-
-@media screen and (max-width: 600px) {
-#hmwpgr .et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container, #hmwpgr .et_fixed_nav.et_show_nav #page-container {
-    padding-top: 0;
-}
-}
+#hmwpgr .reviewfail { background: red none repeat scroll 0 0; color: #fff; font-family: arial, sans-serif; margin-top: 10px; padding: 20px; }
+#hmwpgr .reviewsuccess { background: green none repeat scroll 0 0; color: white; font-family: arial; margin-top: 10px; padding: 20px; }
+#hmwpgr #footer-bottom { background-color: #fff !important; }
+#hmwpgr #footer-info, #hmwpgr #footer-info a { color: #959595; }
+#hmwpgr .fifty { float: left; padding-right: 30px; width: 50%; }
+#hmwpgr .email { float: left; width: 50%; }
+#hmwpgr .registerbutton { border: 2px solid #2ea3f2; border-radius: 5px; height: 44px; padding: 11px 15px !important; }
+#hmwpgr #main-header { background-color: #f2f2f2; box-shadow: none; }
+#hmwpgr .current-menu-item { border-bottom: 3px solid #ccc; }
+#hmwpgr .menu-item { padding-left: 20px; }
+#hmwpgr #logo { max-height: 55%; }
+#hmwpgr #top-menu li { font-size: 16px; }
+#hmwpgr .reviewcopy { background: #f7f7f7 none repeat scroll 0 0; border: 1px solid #ccc; font-style: italic; padding: 20px; }
+#hmwpgr #footer-info { text-align: center; width: 100%; }
+#hmwpgr .edit-attachment { display:none; }
+#hmwpgr #wpua-preview-existing { width: 100%; }
+#hmwpgr #wpua-thumbnail-existing, .description, #pmpro_account-profile { display: none !important; }
+#hmwpgr #wpua-remove-button-existing, #wpua-undo-button-existing { float: left; margin-right:10px; width: auto; }
+#hmwpgr form.pmpro_form .pmpro_submit { margin-left: 0px; }
+#hmwpgr th { background: #f7f7f7 none repeat scroll 0 0; }
+#hmwpgr #wpua-add-existing { margin-bottom: 26px; }
+#hmwpgr .entry-content table, body.et-pb-preview #main-content .container table { margin: 17px 0 15px; }
+#hmwpgr .copybutton { background: #2ea3f2 none repeat scroll 0 0 !important; border: 0 none; border-radius: 5px; color: #fff !important; cursor: pointer; font-family: arial; font-size: 17px; font-weight: bolder; margin-top: 10px; padding: 12px 22px; width: 100%; }
+#hmwpgr .updated, .wpua-edit-container h3 { display:none; }
+#hmwpgr .half { float: left; margin-right: 5%; width: 45%; }
+#hmwpgr .lower h2 { font-size: 18px !important; font-weight: 600 !important; }
 
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
+
 	/* Google Reviews */
 	#hawp_google-reviews { display: flex; justify-content: space-between; flex-flow: row wrap; }
 	#hawp_google-reviews .review-item { flex: 0 0 48%; max-width: 48%; }
