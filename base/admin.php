@@ -1,7 +1,7 @@
 <?php
 /**
  * WP Google Places Reviews
- * Version 1.0.2
+ * Version 1.0.3
  */
 
 if (!defined('ABSPATH')) exit();
