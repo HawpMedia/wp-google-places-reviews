@@ -33,6 +33,9 @@ Easily add your Google Places profile reviews to your website.
 
 == Changelog ==
 
+= 1.0.3 =
+* Fix potentially fatal error with a generic variable name that gets the version of the plugin, it is now removed
+
 = 1.0.2 =
 * Update meta, class and other prefix values
 * Clean css
